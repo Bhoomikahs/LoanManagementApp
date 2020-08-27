@@ -1,0 +1,9 @@
+package com.example.search.entity;
+
+public class Loan {
+
+	private int id;
+	private int loanNumber;
+	private Long loanAmount;
+	
+}

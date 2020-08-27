@@ -1,0 +1,17 @@
+package com.example.search.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.example.search.repo.BorrowerRepository;
+import com.example.search.repo.LoanRepository;
+
+public class SearchController {
+	
+	@Autowired
+	private BorrowerRepository borrowerRepository;
+	
+	@Autowired
+	private LoanRepository loanRepository;
+	
+	
+}

@@ -1,0 +1,29 @@
+package com.example.search.entity;
+
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="borrower")
+public class Borrower {
+	
+	@Id
+    @GeneratedValue
+	private int id;
+	
+	private String borrowerName;
+	private String gender;
+	
+	@JoinColumn(name="loan_id")
+	@OneToMany(targetEntity = Loan.class,cascade = CascadeType.ALL)
+	private List<Loan> loan;
+
+	
+}

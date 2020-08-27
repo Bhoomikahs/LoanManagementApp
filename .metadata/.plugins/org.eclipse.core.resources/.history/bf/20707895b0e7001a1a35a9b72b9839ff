@@ -1,0 +1,11 @@
+package com.example.search.entity;
+
+
+public class Borrower {
+	
+	private int id;
+	private String borrowerName;
+	private String gender;
+	
+
+}

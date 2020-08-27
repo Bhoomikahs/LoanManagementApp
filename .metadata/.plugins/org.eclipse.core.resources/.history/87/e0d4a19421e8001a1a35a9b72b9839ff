@@ -1,0 +1,27 @@
+package com.example.search.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.search.dto.SearchRequest;
+import com.example.search.entity.Borrower;
+import com.example.search.repo.BorrowerRepository;
+import com.example.search.repo.LoanRepository;
+
+@RestController
+public class SearchController {
+	
+	@Autowired
+	private BorrowerRepository borrowerRepository;
+	
+	@Autowired
+	private LoanRepository loanRepository;
+	
+	
+	public Borrower create(@RequestBody SearchRequest request) {
+		return borrowerRepository.save(request.)
+	}
+	
+	
+}

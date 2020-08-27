@@ -1,0 +1,17 @@
+package com.example.search.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="borrower")
+public class Borrower {
+	
+	private int id;
+	private String borrowerName;
+	private String gender;
+	
+	
+	
+
+}

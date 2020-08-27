@@ -1,0 +1,63 @@
+package com.example.search.entity;
+
+import java.util.List;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="borrower")
+public class Borrower {
+	
+	@Id
+    @GeneratedValue
+	private int id;
+	
+	private String borrowerName;
+	private String gender;
+	
+	@JoinColumn(name="loan_id")
+	@OneToMany
+	private List<Loan> loan;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getBorrowerName() {
+		return borrowerName;
+	}
+
+	public void setBorrowerName(String borrowerName) {
+		this.borrowerName = borrowerName;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public Loan getLoan() {
+		return loan;
+	}
+
+	public void setLoan(Loan loan) {
+		this.loan = loan;
+	}
+	
+	
+	
+	
+
+}
